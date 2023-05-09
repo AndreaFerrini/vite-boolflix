@@ -7,14 +7,22 @@ export default{
 </script>
 
 <template>
-    <header class="d-flex ps-5 align-items-center">
+    <header class="d-flex p-4 align-items-center">
         <h1>Boolflix</h1>
     </header>
 </template>
 
 <style scoped>
 
+header{
+    background-color: rgb(0,8,29);
+}
+
 h1{
     color: red;
+    transform: rotateY(-30deg) rotateX(30deg);
+    perspective: 800px;
+    transform-origin: 50% 0;
+    font-size: 55px;
 }
 </style>

@@ -7,8 +7,11 @@ export default{
 </script>
 
 <template>
-    <header class="d-flex p-4 align-items-center">
+    <header class="d-flex p-4 align-items-center justify-content-between">
         <h1>Boolflix</h1>
+        <form class="d-flex">
+            <input type="search" placeholder="search">
+        </form>
     </header>
 </template>
 
@@ -25,4 +28,6 @@ h1{
     transform-origin: 50% 0;
     font-size: 55px;
 }
+
+
 </style>

@@ -1,9 +1,20 @@
 <script>
 
+import HeaderComp from "./components/HeaderComp.vue";
+
+export default{
+  name: "App",
+  components: {
+    HeaderComp,
+  },
+  methods: {
+  }
+}
+
 </script>
 
 <template>
-  <h1>Prova</h1>
+  <HeaderComp/>
 </template>
 
 <style>

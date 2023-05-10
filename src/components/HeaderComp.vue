@@ -1,16 +1,25 @@
 <script>
 
+import {store} from "../store"
+
+
 export default{
     name: "HeaderComp",
+    data() {
+        return {
+            store
+        }
+    }
 }
 
 </script>
 
 <template>
-    <header class="d-flex p-4 align-items-center justify-content-between">
+    <header class="d-flex  p-4 align-items-center justify-content-between">
         <h1>Boolflix</h1>
         <form class="d-flex">
-            <input type="search" placeholder="search">
+            <input type="text" placeholder="search" v-model="store.testoRicerca">
+            <button @click="$emit('apiCall')">Start</button>
         </form>
     </header>
 </template>

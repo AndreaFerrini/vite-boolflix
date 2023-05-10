@@ -14,6 +14,8 @@ export default {
             <div class="card-body">
                 <h5 class="card-title">{{ infoFilm.original_title }}</h5>
                 <p class="card-text">{{ infoFilm.overview }}</p>
+                <h6>{{ infoFilm.original_language }}</h6>
+                <h6>{{ infoFilm.vote_average }}</h6>
             </div>
         </div>
     </div>

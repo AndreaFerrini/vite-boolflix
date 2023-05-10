@@ -1,11 +1,11 @@
 <script>
 
 import axios from "axios";
-import {store} from "./store";
+import { store } from "./store";
 import HeaderComp from "./components/HeaderComp.vue";
 import MainComp from "./components/MainComp.vue";
 
-export default{
+export default {
   name: "App",
   components: {
     HeaderComp,
@@ -19,7 +19,7 @@ export default{
   methods: {
     searchFilm() {
       axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${store.apiKey}&query=${store.testoRicerca}`)
-        .then( (res)=> {
+        .then((res) => {
           console.log(res.data.results)
           store.arrayFilm = res.data.results
         })
@@ -31,8 +31,7 @@ export default{
 
 <template>
   <HeaderComp @apiCall="searchFilm()" />
-  <MainComp/>
+  <MainComp />
 </template>
 
-<style>
-</style>
+<style></style>

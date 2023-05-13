@@ -32,6 +32,9 @@ export default {
             } else if (this.info.poster_path == null) {
                 return `/images/image-not-available.jpg`
             }
+        },
+        getVote() {
+            return Math.ceil(this.info.vote_average / 2)
         }
     }
 }
@@ -47,7 +50,10 @@ export default {
                 <p class="card-text">{{ info.overview }}</p>
                 <!-- <h6>{{ info.original_language }}</h6> -->
                 <img :src="stampaBandiera()" width="50" alt="">
-                <h6>{{ info.vote_average }}</h6>
+                <h6>Voto: {{ getVote() }}</h6>
+                <div>
+                    <i v-for="n in 5" class="fa-star" :class="(n <= getVote()) ? 'fa-solid' : 'fa-regular'"></i>
+                </div>
             </div>
         </div>
     </div>

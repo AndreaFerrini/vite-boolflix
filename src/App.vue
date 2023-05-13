@@ -23,6 +23,13 @@ export default {
           console.log(res.data.results)
           store.arrayFilm = res.data.results
         })
+
+
+      axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${store.apiKey}&query=${store.testoRicerca}`)
+        .then((res) => {
+          console.log(res.data.results)
+          store.arraySerie = res.data.results
+        })
     }
   }
 }

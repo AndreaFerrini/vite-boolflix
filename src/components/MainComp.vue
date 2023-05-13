@@ -41,7 +41,7 @@ main {
 }
 
 h3 {
-    color: white;
+    color: rgb(255, 0, 0);
     display: block;
 }
 </style>
